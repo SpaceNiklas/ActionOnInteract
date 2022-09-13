@@ -1,0 +1,7 @@
+name: ActionOnInteract
+version: '1.0'
+main: com.spaceniklas.actiononinteract.Actiononinteract
+api-version: 1.16
+authors: [ SpaceNiklas ]
+description: Executes an action on interact!
+website: www.spaceniklas.com
