@@ -1,0 +1,58 @@
+#ItemOnInteract v1.0 Config
+#by SpaceNiklas
+
+#Discord: https://discord.gg/93DURaJxuf
+#SpigotMC: https://www.spigotmc.org/resources/actiononinteract.105244/
+
+#Here you can edit the plugin to your liking!
+
+#VARIABLES
+#%damager% - Variable that represents the damager!
+#%victim% - Variable that represents the victim!
+
+#####################
+#TYPE OF INTERACTION#
+#####################
+
+#Options:
+#"damage" - Executes the action when the damager hits/victim gets hit.
+#"rightclick" - Executes the action when the damager clicks/victim gets clicked.
+
+type-of-interaction: 'damage'
+
+#ACTION FOR DAMAGER
+#(put "null" to disable)
+damager:
+  give-item: 'DIAMOND' #List of Materials here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html.
+  amount-item: 1 #Amount of the item specified above.
+  console-command: 'effect give %damager% minecraft:strength 10 2' #Input any command without the "/". Executes the command as the console
+  player-command: 'tell %victim% I hit you!' #Input any command without the "/". Executes the command as the player
+
+#ACTION FOR VICTIM
+#(put "null" to disable)
+victim:
+  give-item: 'null' #List of Materials here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html.
+  amount-item: 0 #Amount of the item specified above.
+  console-command: 'null' #Input any command without the "/". Executes the command as the console
+  player-command: 'null' #Input any command without the "/". Executes the command as the player
+
+################
+#ON PLAYER KILL#
+################
+#(Variables work here too)
+
+#ACTION FOR KILLER
+#(put "null" to disable)
+killer:
+  give-item: 'DIAMOND' #List of Materials here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html.
+  amount-item: 10 #Amount of the item specified above.
+  console-command: 'effect give %damager% minecraft:strength 10 4' #Input any command without the "/". Executes the command as the console
+  player-command: 'tell %victim% I killed you!' #Input any command without the "/". Executes the command as the player
+
+#ACTION FOR THE DEAD PLAYER
+#(put "null" to disable)
+dead-player:
+  give-item: 'null' #List of Materials here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html.
+  amount-item: 0 #Amount of the item specified above.
+  console-command: 'null' #Input any command without the "/". Executes the command as the console
+  player-command: 'null' #Input any command without the "/". Executes the command as the player
